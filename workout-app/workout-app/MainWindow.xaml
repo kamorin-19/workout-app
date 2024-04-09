@@ -6,7 +6,25 @@
         xmlns:local="clr-namespace:workout_app"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="{x:Type MenuItem}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#FF333333"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="{x:Type Menu}">
+            <Setter Property="Background" Value="#FF444444"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Menu">
+                    <MenuItem Header="Workout"/>
+                    <MenuItem Header="Exercises"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
     </Grid>
 </Window>
